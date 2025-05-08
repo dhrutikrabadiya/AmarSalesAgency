@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>અમર સેલ્સ એજન્સી - વિસાવદર</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --primary: #00fff7;
@@ -61,23 +61,27 @@
     }
 
     header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('Agency.jpg') no-repeat center ;
-  background-size: cover; /* Keeps it full width & height with good visibility */
-  background-attachment: fixed; /* Optional parallax feel */
-  text-align: center;
-  width: auto;    
-  padding: 0 20px;
-  background-repeat: no-repeat;
-}
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('Agency.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 0 20px;
+    }
 
+    .responsive-image {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
 
-    header h1 {
+    .overlay-text h1 {
       font-size: 3.5rem;
       color: var(--primary);
       margin-bottom: 20px;
@@ -159,25 +163,40 @@
       font-size: 0.9rem;
     }
 
+    /* Responsive styles */
     @media (max-width: 768px) {
-       header {
-        height: 100vh;
-        width : 100vw;
-        padding: 0 10px;
-        background-position: center top;
-        background-size: cover;
+      header {
+        background: none;
+        min-height: auto;
+        padding: 0;
       }
-      header h1 {
-        font-size: 2.5rem;
+
+      .responsive-image {
+        display: block;
       }
+
+      .overlay-text h1 {
+        font-size: 2rem;
+        margin-top: -30px;
+        text-shadow: 1px 1px 5px #000;
+      }
+
       header p {
         font-size: 1rem;
+      }
+
+      nav {
+        padding: 15px 20px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
       }
     }
   </style>
 </head>
 
-</head>
 <body>
 
   <nav>
@@ -190,33 +209,31 @@
   </nav>
 
   <header id="home">
+    <img class="responsive-image" src="Agency.jpg" alt="Amar Sales Banner" />
     <div class="overlay-text">
-      <h1>અમર સેલ્સ એજન્સી</h1>
     </div>
   </header>
 
   <section id="about">
     <h2>અમારા વિશે</h2>
-<p>અમર સેલ્સ એજન્સી, વિસાવદરમાં સ્થિત એક વિશ્વસનીય અને આગવી એજન્સી છે, જે ઊચ્ચ ગુણવત્તાવાળા સિમેન્ટ, લોખંડ અને બાંધકામસંબંધી અન્ય સામગ્રીના વેચાણમાં વિશેષતા ધરાવે છે. અમે ACC Cement, Utkarsh TMT, Grallent TMT, Dr. Fixit, Birla White & Putty અને Tractor Lime Brand જેવી જાણીતી અને વિશ્વવિશ્વાસપાત્ર બ્રાન્ડ્સના પ્રતિકૃત વિક્રેતા તરીકે કાર્ય કરીએ છીએ. અમે શ્રેષ્ઠ અને પ્રમાણભૂત સામગ્રીને તમારા સુધી પહોંચાડવાનો વિશ્વાસ પ્રસ્થાપિત કર્યો છે. ગુણવત્તા, વિશ્વાસ, ઝડપી સપ્લાય અને ગ્રાહકસંતુષ્ટિ એ અમારા ધ્યેય છે – જે અમને વિસ્તરતી ગ્રાહકભક્તિ તરફ દોરી જાય છે.</p>
-</section>
+    <p>અમર સેલ્સ એજન્સી, વિસાવદરમાં સ્થિત એક વિશ્વસનીય અને આગવી એજન્સી છે, જે ઊચ્ચ ગુણવત્તાવાળા સિમેન્ટ અને લોકહંડ ઉત્પાદનોના વેચાણમાં વિશેષતા ધરાવે છે. અમે ACC Cement, Utkarsh TMT, Grallent TMT અને Dr. Fixit જેવી જાણીતી અને વિશ્વવિશ્વાસપાત્ર બ્રાન્ડ્સના પ્રતિકૃત વિક્રેતા તરીકે કાર્ય કરીએ છીએ. અમે શ્રેષ્ઠ અને પ્રમાણભૂત સામગ્રીને તમારા સુધી પહોંચાડવાનો વિશ્વાસ પ્રસ્થાપિત કર્યો છે. ગુણવત્તા, વિશ્વાસ, ઝડપી સપ્લાય અને ગ્રાહકસંતુષ્ટિ એ અમારા ધ્યેય છે – જે અમને વિસ્તરતી ગ્રાહકભક્તિ તરફ દોરી જાય છે.</p>
+  </section>
   
   <section id="services">
     <h2>અમારી સેવાઓ</h2>
     <div class="services-grid">
-        <div class="card">
-           <h3>વિશિષ્ટ બ્રાન્ડ ડીલરશીપ</h3>
-            <p>ACC Cement, Grallent TMT, Utkarsh TMT, Dr. Fixit, Birla White & Putty અને Tractor Lime Brand જેવા પ્રખ્યાત બ્રાન્ડના ઓથોરાઈઝ્ડ વિક્રેતા છીએ.</p>
-       </div>
-       <div class="card">
-          <h3>ગ્રાહક કેન્દ્રી સેવા</h3>
-            <p>તમારા જરૂરિયાત મુજબ યોગ્ય માર્ગદર્શન અને વેચાણ પછી પણ સંપૂર્ણ સહાયતા આપીએ છીએ.</p>
-        </div>
-        <div class="card">
-          <h3>ઝડપી અને વિશ્વસનીય સપ્લાય</h3>
-          <p>વિસાવદર તેમજ આસપાસના વિસ્તારોમાં ઝડપથી અને સુરક્ષિત રીતે માલ પહોંચાડવાની અમારી ખાતરી.</p>
-        </div>
-
-          
+      <div class="card">
+        <h3>વિશિષ્ટ બ્રાન્ડ ડીલરશીપ</h3>
+        <p>ACC Cement, Grallent TMT, Utkarsh TMT અને Dr. Fixit જેવા ઉત્તમ બ્રાન્ડના ઓથોરાઈઝ્ડ વિક્રેતા છીએ.</p>
+      </div>
+      <div class="card">
+        <h3>ગ્રાહક કેન્દ્રી સેવા</h3>
+        <p>તમારા જરૂરિયાત મુજબ યોગ્ય માર્ગદર્શન અને વેચાણ પછી પણ સંપૂર્ણ સહાયતા.</p>
+      </div>
+      <div class="card">
+        <h3>ઝડપી અને વિશ્વસનીય સપ્લાય</h3>
+        <p>વિસાવદર અને આસપાસના વિસ્તારમાં ઝડપી અને સલામત સપ્લાય સેવાઓ.</p>
+      </div>
     </div>
   </section>
 
